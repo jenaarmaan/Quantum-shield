@@ -4,8 +4,15 @@
  * Self-contained for seamless execution under Node.js v22+ type-stripping runtime.
  */
 
+import 'dotenv/config';
 import express from 'express';
 import crypto from 'node:crypto';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const distPath = path.resolve(__dirname, 'dist');
 
 // --- Cryptographic & Mathematical Utilities ---
 
@@ -590,15 +597,15 @@ async function startServer() {
       });
       app.use(vite.middlewares);
     } catch (_err) {
-      app.use(express.static('dist'));
+      app.use(express.static(distPath));
       app.get('*', (_req, res) => {
-        res.sendFile('dist/index.html', { root: '.' });
+        res.sendFile(path.join(distPath, 'index.html'));
       });
     }
   } else {
-    app.use(express.static('dist'));
+    app.use(express.static(distPath));
     app.get('*', (_req, res) => {
-      res.sendFile('dist/index.html', { root: '.' });
+      res.sendFile(path.join(distPath, 'index.html'));
     });
   }
 

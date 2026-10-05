@@ -65,6 +65,32 @@ python3 -c "from quantumshield.benchmark.qds_bench import QDSBenchRunner; print(
 
 ---
 
+## Deploying to Render
+
+This repository is pre-configured for one-click and continuous deployment on [Render](https://render.com).
+
+### Option 1: Blueprint Deployment (Recommended)
+1. Push this repository to your GitHub or GitLab account.
+2. In the [Render Dashboard](https://dashboard.render.com/), click **New +** → **Blueprint**.
+3. Connect your repository. Render will automatically detect [`render.yaml`](file:///d:/projects/Quantum-shield/render.yaml) and configure the web service.
+4. Click **Apply**.
+
+### Option 2: Manual Web Service Setup
+1. In the [Render Dashboard](https://dashboard.render.com/), click **New +** → **Web Service**.
+2. Connect your repository.
+3. Configure settings:
+   - **Environment**: `Node`
+   - **Node Version**: `>= 20.0.0`
+   - **Build Command**: `npm install && npm run build`
+   - **Start Command**: `npm start`
+4. Add Environment Variables (optional):
+   - `NODE_ENV`: `production`
+   - `PORT`: `10000` (Render sets this automatically)
+   - `GEMINI_API_KEY`: *(Optional, for AI capabilities)*
+5. Click **Deploy Web Service**.
+
+---
+
 ## Directory Structure
 ```
 quantumshield/             # Python 3.10+ Scientific Reference Engine
