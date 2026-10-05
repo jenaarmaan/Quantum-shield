@@ -1,0 +1,26 @@
+{
+  "id": "/",
+  "name": "QuantumShield Security Platform",
+  "short_name": "Q-Shield",
+  "description": "Deterministic quantum digital-signature security evaluation, red-team attack simulation, exact binomial and SPRT statistical detection platform.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}

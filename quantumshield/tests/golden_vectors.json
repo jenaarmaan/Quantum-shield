@@ -1,0 +1,50 @@
+[
+  {
+    "name": "case_honest",
+    "seed": 1001,
+    "n_qubits": 200,
+    "noise_rate": 0.01,
+    "attack_type": "none",
+    "attack_strength": 0.0,
+    "mismatches": 0,
+    "qber": 0.0,
+    "p0": 0.006666666666666666,
+    "threshold": 8,
+    "threshold_rate": 0.04,
+    "verdict": "ACCEPT",
+    "threat_type": "NONE",
+    "result_hash": "b9ea867b82321529af482c5adb6d4f2f443a1d589da47549d165d7f8811821b6"
+  },
+  {
+    "name": "case_forgery",
+    "seed": 1002,
+    "n_qubits": 200,
+    "noise_rate": 0.01,
+    "attack_type": "forgery",
+    "attack_strength": 1.0,
+    "mismatches": 93,
+    "qber": 0.465,
+    "p0": 0.006666666666666666,
+    "threshold": 8,
+    "threshold_rate": 0.04,
+    "verdict": "REJECT",
+    "threat_type": "FORGERY",
+    "result_hash": "7253fa1dded2a35a6d38be995c742c90a0b03e325bf20491f1a2d58d6ef2f00a"
+  },
+  {
+    "name": "case_intercept",
+    "seed": 1003,
+    "n_qubits": 200,
+    "noise_rate": 0.01,
+    "attack_type": "intercept_resend",
+    "attack_strength": 0.3,
+    "mismatches": 25,
+    "qber": 0.125,
+    "p0": 0.006666666666666666,
+    "threshold": 8,
+    "threshold_rate": 0.04,
+    "verdict": "REJECT",
+    "threat_type": "CHANNEL_MANIPULATION",
+    "result_hash": "ee79c1e50896890b3efe09943b5270020f9feec64907025d5bfcdc284fabc8cf"
+  }
+]

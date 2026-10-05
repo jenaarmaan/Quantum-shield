@@ -1,0 +1,6 @@
+{
+  "name": "QuantumShield",
+  "description": "Deterministic quantum digital-signature security evaluation, red-team attack simulation, exact binomial and SPRT statistical detection platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
